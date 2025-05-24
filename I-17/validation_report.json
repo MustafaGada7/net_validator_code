@@ -1,0 +1,438 @@
+{
+  "summary": {
+    "total": 40,
+    "errors": 9,
+    "warnings": 4,
+    "success": 9,
+    "info": 18
+  },
+  "errors": [
+    {
+      "message": "Link file is empty or couldn't be loaded: /Users/mustafagadah/Desktop/net_validator_code_I-17/I-17/link_performance.csv",
+      "field": null,
+      "details": {}
+    },
+    {
+      "message": "Missing required VDF parameter field: vdf_fftt",
+      "field": "vdf_fftt",
+      "details": {}
+    },
+    {
+      "message": "Missing required VDF parameter field: vdf_length_mi",
+      "field": "vdf_length_mi",
+      "details": {}
+    },
+    {
+      "message": "Missing required VDF parameter field: vdf_free_speed_mph",
+      "field": "vdf_free_speed_mph",
+      "details": {}
+    },
+    {
+      "message": "Demand file has incorrect column structure. Missing columns: volume. Extra columns not allowed: unnamed: 2. Demand file must have exactly 3 columns: o_zone_id, d_zone_id, volume.",
+      "field": "demand",
+      "details": {
+        "missing_columns": [
+          "volume"
+        ],
+        "extra_columns": [
+          "unnamed: 2"
+        ]
+      }
+    },
+    {
+      "message": "Demand file columns are not in the correct order. Required: o_zone_id, d_zone_id, volume",
+      "field": "demand",
+      "details": {
+        "current_order": [
+          "o_zone_id",
+          "d_zone_id",
+          "unnamed: 2"
+        ]
+      }
+    },
+    {
+      "message": "Missing required fields in demand file: volume",
+      "field": null,
+      "details": {
+        "missing_fields": [
+          "volume"
+        ]
+      }
+    },
+    {
+      "message": "No links with positive obs_volume values found. ODME requires observed volumes.",
+      "field": "obs_volume",
+      "details": {}
+    },
+    {
+      "message": "Average network speed (104.8 mph) is unreasonably high",
+      "field": "assignment",
+      "details": {
+        "avg_speed": 104.84544392879977
+      }
+    }
+  ],
+  "warnings": [
+    {
+      "message": "mode_type.csv file not found",
+      "field": "mode_type",
+      "details": {}
+    },
+    {
+      "message": "Found 5 origins with poor accessibility (< 5 destinations)",
+      "field": "accessibility",
+      "details": {
+        "poor_access_origins": [
+          1827,
+          1836,
+          3409,
+          3411,
+          3412
+        ]
+      }
+    },
+    {
+      "message": "Found 5 destinations with poor reachability (< 5 origins)",
+      "field": "accessibility",
+      "details": {
+        "poor_reach_dests": [
+          675,
+          1827,
+          1836,
+          3410,
+          3413
+        ]
+      }
+    },
+    {
+      "message": "mode_type.csv not loaded. Cannot check demand-performance connectivity.",
+      "field": "accessibility",
+      "details": {}
+    }
+  ],
+  "success": [
+    {
+      "message": "Zone centroids are correctly listed before physical nodes in non-decreasing order",
+      "field": "zone_id",
+      "details": {}
+    },
+    {
+      "message": "All zones in demand file exist in node file",
+      "field": "zone_id",
+      "details": {}
+    },
+    {
+      "message": "Good correlation between assigned and reference volumes (R\u00b2 = 0.922)",
+      "field": "reference_volume",
+      "details": {
+        "r_squared": 0.9216133229549458
+      }
+    },
+    {
+      "message": "Low percentage error between assigned and reference volumes (MAPE = 4.5%)",
+      "field": "reference_volume",
+      "details": {
+        "mape": 4.54239490109043
+      }
+    },
+    {
+      "message": "Link performance validation completed successfully with reasonable metrics",
+      "field": "assignment",
+      "details": {}
+    },
+    {
+      "message": "ref_volume imported successfully",
+      "field": "ref_volume",
+      "details": {}
+    },
+    {
+      "message": "R^2 value computed: -70.0523. Comparison successful.",
+      "field": "r2_score",
+      "details": {}
+    },
+    {
+      "message": "Route assignment validation completed successfully with proper path distributions",
+      "field": "route_assignment",
+      "details": {}
+    },
+    {
+      "message": "Traffic assignment validation (Level 7) completed successfully",
+      "field": "level_7",
+      "details": {}
+    }
+  ],
+  "info": [
+    {
+      "message": "Found settings.csv with 1 configuration rows",
+      "field": "settings",
+      "details": {}
+    },
+    {
+      "message": "Speed values appear to be in km/h (mean: 0.00, range: 0-0)",
+      "field": "free_speed",
+      "details": {}
+    },
+    {
+      "message": "Capacity values range from nan to nan (mean: nan)",
+      "field": "capacity",
+      "details": {
+        "min": NaN,
+        "max": NaN,
+        "mean": NaN
+      }
+    },
+    {
+      "message": "Found 13 zone centroids out of 87 total nodes",
+      "field": "zone_id",
+      "details": {}
+    },
+    {
+      "message": "Found 9 demand records with same origin and destination zone",
+      "field": "o_zone_id",
+      "details": {
+        "self_loop_count": 9
+      }
+    },
+    {
+      "message": "ODME mode is set to 0. ODME validation will be skipped.",
+      "field": "odme_mode",
+      "details": {}
+    },
+    {
+      "message": "OD Performance statistics: 8 OD pairs, 5 origins, 5 destinations, 13468.6 total volume",
+      "field": "accessibility",
+      "details": {
+        "total_od_pairs": 8,
+        "unique_origins": 5,
+        "unique_destinations": 5,
+        "total_volume": 13468.616730000002
+      }
+    },
+    {
+      "message": "Accessibility metrics: Avg destinations per origin = 1.6, Avg origins per destination = 1.6",
+      "field": "accessibility",
+      "details": {
+        "avg_accessible_destinations": 1.6,
+        "avg_reachable_origins": 1.6
+      }
+    },
+    {
+      "message": "Route assignment statistics: 8 routes for 8 OD pairs (avg 1.00 routes per OD)",
+      "field": "route_assignment",
+      "details": {
+        "total_routes": 8,
+        "unique_od_pairs": 8,
+        "avg_routes_per_od": 1.0
+      }
+    },
+    {
+      "message": "Average congestion ratio (travel time / free flow time): 1.00",
+      "field": "route_assignment",
+      "details": {
+        "avg_congestion": 1.0
+      }
+    },
+    {
+      "message": "Assignment metrics: Total volume = 187551.7, VMT = 72375626.7 vehicle-miles, VHT = 690307.8 vehicle-hours, Avg speed = 104.8 mph",
+      "field": "assignment",
+      "details": {
+        "total_volume": 187551.6771,
+        "total_vmt": 72375626.711552,
+        "total_vht": 690307.790205,
+        "avg_speed": 104.84544392879977
+      }
+    },
+    {
+      "message": "Link speed statistics: Average = 85.4 mph, Range = 64.0 - 105.0 mph",
+      "field": "assignment",
+      "details": {
+        "avg_link_speed_mph": 85.36606607142858,
+        "min_link_speed_mph": 64.0,
+        "max_link_speed_mph": 105.0
+      }
+    },
+    {
+      "message": "No links with valid reference volumes found for comparison.",
+      "field": "reference_volume",
+      "details": {}
+    },
+    {
+      "message": "Reference volume comparison: R\u00b2 = 0.922, RMSE = 393.7, MAPE = 4.5%, 63.0% of links with GEH < 5",
+      "field": "reference_volume",
+      "details": {
+        "r_squared": 0.9216133229549458,
+        "correlation": 0.9600069390139562,
+        "rmse": 393.70259227261033,
+        "mape": 4.54239490109043,
+        "geh_under_5_percent": 62.96296296296296,
+        "volume_gap": 3.981172726032941,
+        "n_points": 27,
+        "total_assigned": 178490.22339999996,
+        "total_reference": 171656.28999999995
+      }
+    },
+    {
+      "message": "Doc statistics: Average = 0.04, Max = 0.19, 0.0% of links have severe congestion (doc > 2)",
+      "field": "assignment",
+      "details": {
+        "avg_doc": 0.04077678571428572,
+        "max_doc": 0.1941,
+        "severe_congestion_percent": 0.0
+      }
+    },
+    {
+      "message": "Congestion duration statistics: Average = 0.04 hours, Max = 0.19 hours, 60.7% of links have congestion (P > 0)",
+      "field": "assignment",
+      "details": {
+        "avg_p": 0.040776749999999994,
+        "max_p": 0.194061,
+        "congested_links_percent": 60.714285714285715
+      }
+    },
+    {
+      "message": "Route assignment statistics: 8 routes for 8 OD pairs (avg 1.00 routes per OD)",
+      "field": "route_assignment",
+      "details": {
+        "total_routes": 8,
+        "unique_od_pairs": 8,
+        "avg_routes_per_od": 1.0
+      }
+    },
+    {
+      "message": "Average congestion ratio (travel time / free flow time): 1.00",
+      "field": "route_assignment",
+      "details": {
+        "avg_congestion": 1.0
+      }
+    }
+  ],
+  "metadata": {
+    "node_file": "/Users/mustafagadah/Desktop/net_validator_code_I-17/I-17/node.csv",
+    "link_file": "/Users/mustafagadah/Desktop/net_validator_code_I-17/I-17/link_performance.csv",
+    "demand_file": "/Users/mustafagadah/Desktop/net_validator_code_I-17/I-17/demand.csv",
+    "validation_time": "2025-05-23 16:59:07",
+    "node_count": 87,
+    "link_count": 0,
+    "demand_count": 79
+  },
+  "field_statistics": {
+    "node": {
+      "name": {
+        "min": 674.0,
+        "max": 3409.0,
+        "mean": 1431.5555555555557,
+        "null_count": 78
+      },
+      "node_id": {
+        "min": 674.0,
+        "max": 3487.0,
+        "mean": 3239.8505747126437,
+        "null_count": 0
+      },
+      "osm_node_id": {
+        "min": 41198152.0,
+        "max": 9619258906.0,
+        "mean": 2007517785.3333333,
+        "null_count": 9
+      },
+      "x_coord": {
+        "min": -112.1146981,
+        "max": -112.1067075,
+        "mean": -112.11264848390805,
+        "null_count": 0
+      },
+      "y_coord": {
+        "min": 33.46753849,
+        "max": 33.5204706,
+        "mean": 33.495227981954024,
+        "null_count": 0
+      },
+      "zone_id": {
+        "min": 674.0,
+        "max": 3413.0,
+        "mean": 2040.7692307692307,
+        "null_count": 74
+      },
+      "taz_id": {
+        "min": 674.0,
+        "max": 3409.0,
+        "mean": 1431.5555555555557,
+        "null_count": 78
+      },
+      "geometry": {
+        "unique_values": 87,
+        "null_count": 0
+      },
+      "notes": {
+        "unique_values": 2,
+        "null_count": 78
+      },
+      "old_node_id": {
+        "min": 1.0,
+        "max": 78.0,
+        "mean": 39.5,
+        "null_count": 9
+      },
+      "is_boundary": {
+        "min": -1.0,
+        "max": 1.0,
+        "mean": 0.0,
+        "null_count": 9
+      },
+      "activity_type": {
+        "unique_values": 5,
+        "null_count": 9
+      },
+      "poi_id": {
+        "min": NaN,
+        "max": NaN,
+        "mean": NaN,
+        "null_count": 87
+      },
+      "production_14:00-18:00": {
+        "min": 0.0,
+        "max": 7132.12,
+        "mean": 1941.0961538615386,
+        "null_count": 74
+      },
+      "atraction_14:00-18:00": {
+        "min": 0.0,
+        "max": 7132.12,
+        "mean": 1861.793076930769,
+        "null_count": 74
+      },
+      "production_16:00-17:00": {
+        "min": 0.0,
+        "max": 2827.83,
+        "mean": 639.6964253484615,
+        "null_count": 74
+      },
+      "atraction_16:00-17:00": {
+        "min": 0.0,
+        "max": 2145.83,
+        "mean": 549.6647511392308,
+        "null_count": 74
+      }
+    },
+    "demand": {
+      "o_zone_id": {
+        "min": 674.0,
+        "max": 3412.0,
+        "mean": 1513.886075949367,
+        "null_count": 0
+      },
+      "d_zone_id": {
+        "min": 674.0,
+        "max": 3413.0,
+        "mean": 1518.113924050633,
+        "null_count": 0
+      },
+      "unnamed: 2": {
+        "min": 0.0,
+        "max": 7132.12,
+        "mean": 176.63227832911392,
+        "null_count": 0
+      }
+    }
+  }
+}
