@@ -1,10 +1,10 @@
 {
   "summary": {
-    "total": 48,
+    "total": 46,
     "errors": 8,
     "warnings": 6,
     "success": 11,
-    "info": 23
+    "info": 21
   },
   "errors": [
     {
@@ -40,16 +40,16 @@
       "field": "to_node_id",
       "details": {
         "unsorted_from_node_groups": [
-          3411,
-          3412
+          3415,
+          3416
         ]
       }
     },
     {
-      "message": "Found 112 links with negative obs_volume values. All values must be non-negative for ODME.",
+      "message": "Found 120 links with negative obs_volume values. All values must be non-negative for ODME.",
       "field": "obs_volume",
       "details": {
-        "negative_count": 112,
+        "negative_count": 120,
         "example_links": [
           1,
           2,
@@ -65,10 +65,10 @@
       "details": {}
     },
     {
-      "message": "Average network speed (104.8 mph) is unreasonably high",
+      "message": "Average network speed (104.1 mph) is unreasonably high",
       "field": "assignment",
       "details": {
-        "avg_speed": 104.84909863641806
+        "avg_speed": 104.07695846773485
       }
     }
   ],
@@ -79,10 +79,10 @@
       "details": {}
     },
     {
-      "message": "Found 88 links with unusually high hourly capacity (>3000)",
+      "message": "Found 96 links with unusually high hourly capacity (>3000)",
       "field": "capacity",
       "details": {
-        "high_capacity_count": 88,
+        "high_capacity_count": 96,
         "example_links": [
           1,
           2,
@@ -93,17 +93,21 @@
       }
     },
     {
-      "message": "Found 48 demand records with zero or negative volume",
+      "message": "Found 28 demand records with zero or negative volume",
       "field": "volume",
       "details": {
-        "invalid_volume_count": 48
+        "invalid_volume_count": 28
       }
     },
     {
-      "message": "Found 5 origins with poor accessibility (< 5 destinations)",
+      "message": "Found 9 origins with poor accessibility (< 5 destinations)",
       "field": "accessibility",
       "details": {
         "poor_access_origins": [
+          674,
+          750,
+          1075,
+          1812,
           1827,
           1836,
           3409,
@@ -113,13 +117,12 @@
       }
     },
     {
-      "message": "Found 5 destinations with poor reachability (< 5 origins)",
+      "message": "Found 4 destinations with poor reachability (< 5 origins)",
       "field": "accessibility",
       "details": {
         "poor_reach_dests": [
-          675,
-          1827,
-          1836,
+          674,
+          3409,
           3410,
           3413
         ]
@@ -153,17 +156,17 @@
       "details": {}
     },
     {
-      "message": "Good correlation between assigned and reference volumes (R\u00b2 = 0.925)",
+      "message": "Good correlation between assigned and reference volumes (R\u00b2 = 0.907)",
       "field": "reference_volume",
       "details": {
-        "r_squared": 0.9245477356432744
+        "r_squared": 0.9072621893967897
       }
     },
     {
-      "message": "Low percentage error between assigned and reference volumes (MAPE = 4.4%)",
+      "message": "Low percentage error between assigned and reference volumes (MAPE = 5.7%)",
       "field": "reference_volume",
       "details": {
-        "mape": 4.398193610099987
+        "mape": 5.712952984064165
       }
     },
     {
@@ -177,7 +180,7 @@
       "details": {}
     },
     {
-      "message": "R^2 value computed: -70.7140. Comparison successful.",
+      "message": "R^2 value computed: -63.6210. Comparison successful.",
       "field": "r2_score",
       "details": {}
     },
@@ -204,26 +207,26 @@
       "details": {}
     },
     {
-      "message": "Capacity values range from 1800.0 to 99999.0 (mean: 35895.21)",
+      "message": "Capacity values range from 1800.0 to 99999.0 (mean: 40168.80)",
       "field": "capacity",
       "details": {
         "min": 1800.0,
         "max": 99999.0,
-        "mean": 35895.21428571428
+        "mean": 40168.8
       }
     },
     {
-      "message": "Field 'zone_id' in node file contains 74 null/empty values",
+      "message": "Field 'zone_id' in node file contains 78 null/empty values",
       "field": "zone_id",
       "details": {}
     },
     {
-      "message": "Field 'name' in node file contains 74 null/empty values",
+      "message": "Field 'name' in node file contains 78 null/empty values",
       "field": "name",
       "details": {}
     },
     {
-      "message": "Found 13 zone centroids out of 87 total nodes",
+      "message": "Found 13 zone centroids out of 91 total nodes",
       "field": "zone_id",
       "details": {}
     },
@@ -233,24 +236,10 @@
       "details": {}
     },
     {
-      "message": "Identified 28 connector links between zone centroids and physical nodes",
+      "message": "Identified 44 connector links between zone centroids and physical nodes",
       "field": "link_id",
       "details": {
-        "connector_count": 28
-      }
-    },
-    {
-      "message": "Found 12 links directly connecting zone centroids to other zone centroids",
-      "field": "link_id",
-      "details": {
-        "centroid_links_count": 12
-      }
-    },
-    {
-      "message": "Found 9 demand records with same origin and destination zone",
-      "field": "o_zone_id",
-      "details": {
-        "self_loop_count": 9
+        "connector_count": 44
       }
     },
     {
@@ -259,29 +248,29 @@
       "details": {}
     },
     {
-      "message": "OD Performance statistics: 8 OD pairs, 5 origins, 5 destinations, 13468.6 total volume",
+      "message": "OD Performance statistics: 30 OD pairs, 10 origins, 8 destinations, 13820.0 total volume",
       "field": "accessibility",
       "details": {
-        "total_od_pairs": 8,
-        "unique_origins": 5,
-        "unique_destinations": 5,
-        "total_volume": 13468.616730000002
+        "total_od_pairs": 30,
+        "unique_origins": 10,
+        "unique_destinations": 8,
+        "total_volume": 13819.95006
       }
     },
     {
-      "message": "Accessibility metrics: Avg destinations per origin = 1.6, Avg origins per destination = 1.6",
+      "message": "Accessibility metrics: Avg destinations per origin = 3.0, Avg origins per destination = 3.8",
       "field": "accessibility",
       "details": {
-        "avg_accessible_destinations": 1.6,
-        "avg_reachable_origins": 1.6
+        "avg_accessible_destinations": 3.0,
+        "avg_reachable_origins": 3.75
       }
     },
     {
-      "message": "Route assignment statistics: 8 routes for 8 OD pairs (avg 1.00 routes per OD)",
+      "message": "Route assignment statistics: 30 routes for 30 OD pairs (avg 1.00 routes per OD)",
       "field": "route_assignment",
       "details": {
-        "total_routes": 8,
-        "unique_od_pairs": 8,
+        "total_routes": 30,
+        "unique_od_pairs": 30,
         "avg_routes_per_od": 1.0
       }
     },
@@ -289,26 +278,26 @@
       "message": "Average congestion ratio (travel time / free flow time): 1.00",
       "field": "route_assignment",
       "details": {
-        "avg_congestion": 1.0000019318609965
+        "avg_congestion": 1.0000026174751533
       }
     },
     {
-      "message": "Assignment metrics: Total volume = 187551.7, VMT = 72375626.7 vehicle-miles, VHT = 690283.7 vehicle-hours, Avg speed = 104.8 mph",
+      "message": "Assignment metrics: Total volume = 218508.6, VMT = 76323246.8 vehicle-miles, VHT = 733334.7 vehicle-hours, Avg speed = 104.1 mph",
       "field": "assignment",
       "details": {
-        "total_volume": 187551.6771,
-        "total_vmt": 72375626.711552,
-        "total_vht": 690283.728261,
-        "avg_speed": 104.84909863641806
+        "total_volume": 218508.57660000003,
+        "total_vmt": 76323246.843463,
+        "total_vht": 733334.716609,
+        "avg_speed": 104.07695846773485
       }
     },
     {
-      "message": "Link speed statistics: Average = 85.1 mph, Range = 64.0 - 105.0 mph",
+      "message": "Link speed statistics: Average = 85.4 mph, Range = 64.0 - 105.0 mph",
       "field": "assignment",
       "details": {
-        "avg_link_speed_mph": 85.12491964285717,
+        "avg_link_speed_mph": 85.44991999999999,
         "min_link_speed_mph": 64.0,
-        "max_link_speed_mph": 105.0
+        "max_link_speed_mph": 104.9999
       }
     },
     {
@@ -317,17 +306,17 @@
       "details": {}
     },
     {
-      "message": "Reference volume comparison: R\u00b2 = 0.925, RMSE = 386.7, MAPE = 4.4%, 64.3% of links with GEH < 5",
+      "message": "Reference volume comparison: R\u00b2 = 0.907, RMSE = 448.2, MAPE = 5.7%, 64.3% of links with GEH < 5",
       "field": "reference_volume",
       "details": {
-        "r_squared": 0.9245477356432744,
-        "correlation": 0.9615340532936285,
-        "rmse": 386.66812742133817,
-        "mape": 4.398193610099987,
+        "r_squared": 0.9072621893967897,
+        "correlation": 0.9525031177884877,
+        "rmse": 448.22481513015435,
+        "mape": 5.712952984064165,
         "geh_under_5_percent": 64.28571428571429,
-        "volume_gap": 3.842493705268709,
+        "volume_gap": 5.14086259842011,
         "n_points": 28,
-        "total_assigned": 185658.34339999995,
+        "total_assigned": 187979.67649999994,
         "total_reference": 178788.40999999995
       }
     },
@@ -335,26 +324,26 @@
       "message": "Doc statistics: Average = 0.05, Max = 0.26, 0.0% of links have severe congestion (doc > 2)",
       "field": "assignment",
       "details": {
-        "avg_doc": 0.052883035714285716,
-        "max_doc": 0.2597,
+        "avg_doc": 0.0513725,
+        "max_doc": 0.2642,
         "severe_congestion_percent": 0.0
       }
     },
     {
-      "message": "Congestion duration statistics: Average = 0.05 hours, Max = 0.26 hours, 60.7% of links have congestion (P > 0)",
+      "message": "Congestion duration statistics: Average = 0.05 hours, Max = 0.26 hours, 81.7% of links have congestion (P > 0)",
       "field": "assignment",
       "details": {
-        "avg_p": 0.052885116071428574,
-        "max_p": 0.259714,
-        "congested_links_percent": 60.714285714285715
+        "avg_p": 0.05137253333333334,
+        "max_p": 0.264207,
+        "congested_links_percent": 81.66666666666667
       }
     },
     {
-      "message": "Route assignment statistics: 8 routes for 8 OD pairs (avg 1.00 routes per OD)",
+      "message": "Route assignment statistics: 30 routes for 30 OD pairs (avg 1.00 routes per OD)",
       "field": "route_assignment",
       "details": {
-        "total_routes": 8,
-        "unique_od_pairs": 8,
+        "total_routes": 30,
+        "unique_od_pairs": 30,
         "avg_routes_per_od": 1.0
       }
     },
@@ -362,7 +351,7 @@
       "message": "Average congestion ratio (travel time / free flow time): 1.00",
       "field": "route_assignment",
       "details": {
-        "avg_congestion": 1.0000019318609965
+        "avg_congestion": 1.0000026174751533
       }
     }
   ],
@@ -370,10 +359,10 @@
     "node_file": "/Users/mustafagadah/Desktop/net_validator_code_I-17/I-17/node.csv",
     "link_file": "/Users/mustafagadah/Desktop/net_validator_code_I-17/I-17/link_performance.csv",
     "demand_file": "/Users/mustafagadah/Desktop/net_validator_code_I-17/I-17/demand.csv",
-    "validation_time": "2025-05-26 12:36:28",
-    "node_count": 87,
-    "link_count": 112,
-    "demand_count": 79
+    "validation_time": "2025-05-27 00:45:12",
+    "node_count": 91,
+    "link_count": 120,
+    "demand_count": 62
   },
   "field_statistics": {
     "node": {
@@ -381,97 +370,97 @@
         "min": 674.0,
         "max": 3413.0,
         "mean": 2040.7692307692307,
-        "null_count": 74
+        "null_count": 78
       },
       "node_id": {
         "min": 674.0,
-        "max": 3487.0,
-        "mean": 3239.8505747126437,
+        "max": 3491.0,
+        "mean": 3250.8241758241757,
         "null_count": 0
       },
       "osm_node_id": {
         "min": 41198152.0,
         "max": 9619258906.0,
         "mean": 2007517785.3333333,
-        "null_count": 9
+        "null_count": 13
       },
       "x_coord": {
         "min": -112.1146981,
         "max": -112.1067075,
-        "mean": -112.11264848390805,
+        "mean": -112.11259717692307,
         "null_count": 0
       },
       "y_coord": {
-        "min": 33.46753849,
-        "max": 33.5204706,
-        "mean": 33.495227981954024,
+        "min": 33.467419,
+        "max": 33.522349,
+        "mean": 33.495214938791214,
         "null_count": 0
       },
       "zone_id": {
         "min": 674.0,
         "max": 3413.0,
         "mean": 2040.7692307692307,
-        "null_count": 74
+        "null_count": 78
       },
       "taz_id": {
         "min": 674.0,
         "max": 3409.0,
         "mean": 1431.5555555555557,
-        "null_count": 78
+        "null_count": 82
       },
       "geometry": {
-        "unique_values": 87,
+        "unique_values": 91,
         "null_count": 0
       },
       "notes": {
         "unique_values": 2,
-        "null_count": 78
+        "null_count": 82
       },
       "old_node_id": {
         "min": 1.0,
         "max": 78.0,
         "mean": 39.5,
-        "null_count": 9
+        "null_count": 13
       },
       "is_boundary": {
         "min": -1.0,
         "max": 1.0,
         "mean": 0.0,
-        "null_count": 9
+        "null_count": 13
       },
       "activity_type": {
         "unique_values": 5,
-        "null_count": 9
+        "null_count": 13
       },
       "poi_id": {
         "min": NaN,
         "max": NaN,
         "mean": NaN,
-        "null_count": 87
+        "null_count": 91
       },
       "production_14:00-18:00": {
         "min": 0.0,
         "max": 7132.12,
         "mean": 1941.0961538615386,
-        "null_count": 74
+        "null_count": 78
       },
       "atraction_14:00-18:00": {
         "min": 0.0,
         "max": 7132.12,
         "mean": 1861.793076930769,
-        "null_count": 74
+        "null_count": 78
       },
       "production_16:00-17:00": {
         "min": 0.0,
         "max": 2827.83,
         "mean": 639.6964253484615,
-        "null_count": 74
+        "null_count": 78
       },
       "atraction_16:00-17:00": {
         "min": 0.0,
         "max": 2145.83,
         "mean": 549.6647511392308,
-        "null_count": 74
+        "null_count": 78
       }
     },
     "link": {
@@ -483,32 +472,32 @@
       },
       "link_id": {
         "min": 1.0,
-        "max": 112.0,
-        "mean": 56.5,
+        "max": 120.0,
+        "mean": 60.5,
         "null_count": 0
       },
       "from_node_id": {
         "min": 674.0,
-        "max": 3487.0,
-        "mean": 3147.25,
+        "max": 3491.0,
+        "mean": 3168.133333333333,
         "null_count": 0
       },
       "to_node_id": {
         "min": 674.0,
-        "max": 3487.0,
-        "mean": 3148.214285714286,
+        "max": 3491.0,
+        "mean": 3169.0333333333333,
         "null_count": 0
       },
       "volume": {
         "min": 0.0,
-        "max": 7168.12,
-        "mean": 1674.5685455357143,
+        "max": 51044.84,
+        "mean": 12746.333629166666,
         "null_count": 0
       },
       "ref_volume": {
         "min": 0.0,
         "max": 7132.12,
-        "mean": 1596.3250892857145,
+        "mean": 1489.9034166666668,
         "null_count": 0
       },
       "base_volume": {
@@ -526,31 +515,31 @@
       "capacity": {
         "min": 1800.0,
         "max": 99999.0,
-        "mean": 35895.21428571428,
+        "mean": 40168.8,
         "null_count": 0
       },
       "d": {
         "min": 0.0,
-        "max": 597.3433,
-        "mean": 121.91394017857144,
+        "max": 12502.21,
+        "mean": 1214.7067391666667,
         "null_count": 0
       },
       "doc": {
         "min": 0.0,
-        "max": 0.2597,
-        "mean": 0.052883035714285716,
+        "max": 1.8495,
+        "mean": 0.3596091666666667,
         "null_count": 0
       },
       "fftt": {
         "min": 7.9371,
         "max": 512.3771,
-        "mean": 191.72664107142856,
+        "mean": 183.38931166666669,
         "null_count": 0
       },
       "travel_time": {
-        "min": 7.9371,
-        "max": 512.3795,
-        "mean": 191.72685089285713,
+        "min": 7.9539,
+        "max": 518.0847,
+        "mean": 183.8846525,
         "null_count": 0
       },
       "vdf_alpha": {
@@ -572,73 +561,73 @@
         "null_count": 0
       },
       "speed_mph": {
-        "min": 64.0,
-        "max": 105.0,
-        "mean": 85.12491964285717,
+        "min": 63.9999,
+        "max": 104.8776,
+        "mean": 85.26154666666666,
         "null_count": 0
       },
       "speed_kmph": {
-        "min": 102.976,
-        "max": 168.9449,
-        "mean": 136.96599732142857,
+        "min": 102.9758,
+        "max": 168.7481,
+        "mean": 137.1858275,
         "null_count": 0
       },
       "vmt": {
         "min": 0.0,
-        "max": 6087763.6684,
-        "mean": 646210.9527817143,
+        "max": 43211844.6788,
+        "mean": 4452189.399201841,
         "null_count": 0
       },
       "vht": {
         "min": 0.0,
-        "max": 57979.180358,
-        "mean": 6163.247573758928,
+        "max": 420167.946365,
+        "mean": 43170.319360650006,
         "null_count": 0
       },
       "pmt": {
         "min": 0.0,
-        "max": 6087763.6684,
-        "mean": 646210.9527817143,
+        "max": 43211844.6788,
+        "mean": 4452189.399201841,
         "null_count": 0
       },
       "pht": {
         "min": 0.0,
-        "max": 57979.180358,
-        "mean": 6163.247573758928,
+        "max": 420167.946365,
+        "mean": 43170.319360650006,
         "null_count": 0
       },
       "vht_qvdf": {
         "min": 0.0,
-        "max": 60045.989115,
-        "mean": 6343.166096875,
+        "max": 684489.524285,
+        "mean": 61187.64934929167,
         "null_count": 0
       },
       "pht_qvdf": {
         "min": 0.0,
-        "max": 60045.989115,
-        "mean": 6343.166096875,
+        "max": 684489.524285,
+        "mean": 61187.64934929167,
         "null_count": 0
       },
       "geometry": {
-        "unique_values": 112,
+        "unique_values": 120,
         "null_count": 0
       },
       "mod_vol_auto": {
         "min": 0.0,
-        "max": 7168.120004,
-        "mean": 1674.5685409285713,
+        "max": 51044.840028,
+        "mean": 12746.3336294,
         "null_count": 0
       },
       "p": {
         "min": 0.0,
-        "max": 0.259714,
-        "mean": 0.052885116071428574,
+        "max": 1.849451,
+        "mean": 0.35960766666666666,
         "null_count": 0
       },
       "t0": {
-        "min": 15.870143,
+        "min": 15.075275,
         "max": 16.0,
-        "mean": 15.973557500000002,
+        "mean": 15.820196225000002,
         "null_count": 0
       },
       "t2": {
@@ -649,416 +638,418 @@
       },
       "t3": {
         "min": 16.0,
-        "max": 16.129857,
-        "mean": 16.0264425,
+        "max": 16.924725,
+        "mean": 16.179803775,
         "null_count": 0
       },
       "vt2_mph": {
-        "min": 48.0,
-        "max": 78.732639,
-        "mean": 63.83219414285715,
+        "min": 18.354449,
+        "max": 67.5,
+        "mean": 53.915084224999994,
         "null_count": 0
       },
       "vt2_kmph": {
-        "min": 77.232,
-        "max": 126.680817,
-        "mean": 102.70600034821427,
+        "min": 29.532309,
+        "max": 108.6075,
+        "mean": 86.74937045833333,
         "null_count": 0
       },
       "mu": {
         "min": 0.0,
-        "max": 3166.6665,
-        "mean": 817.6091199374999,
+        "max": 99999.0,
+        "mean": 6073.809219716667,
         "null_count": 0
       },
       "q_gamma": {
-        "unique_values": 69,
-        "null_count": 44
+        "min": 7302.171429,
+        "max": 5.2676601467824595e+19,
+        "mean": 1.4884507947156874e+18,
+        "null_count": 22
       },
       "free_speed_mph": {
         "min": 64.0,
         "max": 105.0,
-        "mean": 85.125,
+        "mean": 85.45,
         "null_count": 0
       },
       "cutoff_speed_mph": {
         "min": 48.0,
         "max": 78.75,
-        "mean": 63.84375,
+        "mean": 64.0875,
         "null_count": 0
       },
       "free_speed_kmph": {
         "min": 102.976,
         "max": 168.945,
-        "mean": 136.96612499999998,
+        "mean": 137.48905,
         "null_count": 0
       },
       "cutoff_speed_kmph": {
         "min": 77.232,
         "max": 126.70875,
-        "mean": 102.72459374999998,
+        "mean": 103.1167875,
         "null_count": 0
       },
       "congestion_ref_speed_mph": {
-        "min": 63.859259,
-        "max": 100.607526,
-        "mean": 83.74533016964286,
+        "min": 62.561111,
+        "max": 90.0,
+        "mean": 79.01635595833334,
         "null_count": 0
       },
       "avg_queue_speed_mph": {
-        "min": 63.859259,
-        "max": 100.595696,
-        "mean": 83.737570125,
+        "min": 28.585013,
+        "max": 90.0,
+        "mean": 71.49748050833333,
         "null_count": 0
       },
       "avg_qvdf_period_speed_mph": {
-        "min": 63.929475,
-        "max": 102.711393,
-        "mean": 84.39867142857143,
+        "min": 62.612072,
+        "max": 90.0,
+        "mean": 78.21144396666665,
         "null_count": 0
       },
       "congestion_ref_speed_kmph": {
-        "min": 102.749548,
-        "max": 161.87751,
-        "mean": 134.74623622321428,
+        "min": 100.660828,
+        "max": 144.81,
+        "mean": 127.13731673333335,
         "null_count": 0
       },
       "avg_queue_speed_kmph": {
-        "min": 102.749548,
-        "max": 161.858475,
-        "mean": 134.73375032142854,
+        "min": 45.993285,
+        "max": 144.81,
+        "mean": 115.03944603333333,
         "null_count": 0
       },
       "avg_qvdf_period_speed_kmph": {
-        "min": 102.862525,
-        "max": 165.262631,
-        "mean": 135.7974622589286,
+        "min": 100.742823,
+        "max": 144.81,
+        "mean": 125.84221335,
         "null_count": 0
       },
       "avg_qvdf_period_travel_time": {
-        "min": 8.144662,
-        "max": 527.932055,
-        "mean": 193.35706073214286,
+        "min": 10.412932,
+        "max": 811.249408,
+        "mean": 206.83633948333335,
         "null_count": 0
       },
       "severe_congestion_p": {
         "min": 0.0,
-        "max": 0.0,
-        "mean": 0.0,
+        "max": 1.416667,
+        "mean": 0.19722220833333334,
         "null_count": 0
       },
       "spd_mph_14:00": {
         "min": 64.0,
         "max": 105.0,
-        "mean": 85.125,
+        "mean": 85.45,
         "null_count": 0
       },
       "spd_mph_14:05": {
-        "min": 63.994,
-        "max": 104.809,
-        "mean": 85.06436607142857,
+        "min": 63.939,
+        "max": 103.444,
+        "mean": 85.03035,
         "null_count": 0
       },
       "spd_mph_14:10": {
-        "min": 63.988,
-        "max": 104.618,
-        "mean": 85.00363392857142,
+        "min": 63.877,
+        "max": 101.888,
+        "mean": 84.61065833333333,
         "null_count": 0
       },
       "spd_mph_14:15": {
-        "min": 63.982,
-        "max": 104.427,
-        "mean": 84.94307142857143,
+        "min": 63.816,
+        "max": 100.333,
+        "mean": 84.19103333333332,
         "null_count": 0
       },
       "spd_mph_14:20": {
-        "min": 63.976,
-        "max": 104.236,
-        "mean": 84.88237500000001,
+        "min": 63.755,
+        "max": 98.777,
+        "mean": 83.771325,
         "null_count": 0
       },
       "spd_mph_14:25": {
-        "min": 63.971,
-        "max": 104.045,
-        "mean": 84.8217142857143,
+        "min": 63.693,
+        "max": 97.221,
+        "mean": 83.3517,
         "null_count": 0
       },
       "spd_mph_14:30": {
-        "min": 63.965,
-        "max": 103.854,
-        "mean": 84.76101785714286,
+        "min": 63.632,
+        "max": 95.665,
+        "mean": 82.93202500000001,
         "null_count": 0
       },
       "spd_mph_14:35": {
-        "min": 63.959,
-        "max": 103.663,
-        "mean": 84.7003482142857,
+        "min": 63.571,
+        "max": 94.109,
+        "mean": 82.512325,
         "null_count": 0
       },
       "spd_mph_14:40": {
-        "min": 63.953,
-        "max": 103.472,
-        "mean": 84.63967857142858,
+        "min": 63.509,
+        "max": 92.554,
+        "mean": 82.09266666666666,
         "null_count": 0
       },
       "spd_mph_14:45": {
-        "min": 63.947,
-        "max": 103.281,
-        "mean": 84.57904464285717,
+        "min": 63.448,
+        "max": 90.998,
+        "mean": 81.67304166666666,
         "null_count": 0
       },
       "spd_mph_14:50": {
-        "min": 63.941,
-        "max": 103.09,
-        "mean": 84.51835714285714,
+        "min": 63.387,
+        "max": 90.0,
+        "mean": 81.25334166666669,
         "null_count": 0
       },
       "spd_mph_14:55": {
-        "min": 63.935,
-        "max": 102.899,
-        "mean": 84.45773214285714,
+        "min": 63.325,
+        "max": 90.0,
+        "mean": 80.83368333333333,
         "null_count": 0
       },
       "spd_mph_15:00": {
-        "min": 63.929,
-        "max": 102.708,
-        "mean": 84.39706249999999,
+        "min": 63.264,
+        "max": 90.0,
+        "mean": 80.41399166666666,
         "null_count": 0
       },
       "spd_mph_15:05": {
-        "min": 63.924,
-        "max": 102.517,
-        "mean": 84.3364375,
+        "min": 63.203,
+        "max": 90.0,
+        "mean": 79.99723333333334,
         "null_count": 0
       },
       "spd_mph_15:10": {
-        "min": 63.918,
-        "max": 102.326,
-        "mean": 84.27572321428572,
+        "min": 63.141,
+        "max": 90.0,
+        "mean": 79.38774166666668,
         "null_count": 0
       },
       "spd_mph_15:15": {
-        "min": 63.912,
-        "max": 102.135,
-        "mean": 84.21505357142857,
+        "min": 56.846,
+        "max": 90.0,
+        "mean": 78.52444166666666,
         "null_count": 0
       },
       "spd_mph_15:20": {
-        "min": 63.906,
-        "max": 101.944,
-        "mean": 84.15443749999999,
+        "min": 44.771,
+        "max": 90.0,
+        "mean": 77.23195000000001,
         "null_count": 0
       },
       "spd_mph_15:25": {
-        "min": 63.9,
-        "max": 101.753,
-        "mean": 84.09374107142857,
+        "min": 35.914,
+        "max": 90.0,
+        "mean": 75.6212,
         "null_count": 0
       },
       "spd_mph_15:30": {
-        "min": 63.894,
-        "max": 101.562,
-        "mean": 84.03308035714285,
+        "min": 29.742,
+        "max": 90.0,
+        "mean": 73.87543333333333,
         "null_count": 0
       },
       "spd_mph_15:35": {
-        "min": 63.888,
-        "max": 101.371,
-        "mean": 83.97242857142858,
+        "min": 25.485,
+        "max": 90.0,
+        "mean": 72.25356666666667,
         "null_count": 0
       },
       "spd_mph_15:40": {
-        "min": 63.882,
-        "max": 101.18,
-        "mean": 83.91172321428571,
+        "min": 22.558,
+        "max": 90.0,
+        "mean": 70.94942499999999,
         "null_count": 0
       },
       "spd_mph_15:45": {
-        "min": 63.877,
-        "max": 100.989,
-        "mean": 83.85115178571428,
+        "min": 20.577,
+        "max": 90.0,
+        "mean": 69.99059166666666,
         "null_count": 0
       },
       "spd_mph_15:50": {
-        "min": 63.871,
-        "max": 100.798,
-        "mean": 83.79043749999998,
+        "min": 19.3,
+        "max": 90.0,
+        "mean": 69.34368333333332,
         "null_count": 0
       },
       "spd_mph_15:55": {
-        "min": 63.865,
-        "max": 100.606,
-        "mean": 82.92623214285713,
+        "min": 18.585,
+        "max": 90.0,
+        "mean": 68.9657,
         "null_count": 0
       },
       "spd_mph_16:00": {
-        "min": 48.0,
-        "max": 78.733,
-        "mean": 65.23100000000001,
-        "null_count": 44
+        "min": 18.354,
+        "max": 67.5,
+        "mean": 50.86537755102041,
+        "null_count": 22
       },
       "spd_mph_16:05": {
-        "min": 63.865,
-        "max": 100.606,
-        "mean": 82.92623214285713,
+        "min": 18.585,
+        "max": 90.0,
+        "mean": 68.9657,
         "null_count": 0
       },
       "spd_mph_16:10": {
-        "min": 63.871,
-        "max": 100.798,
-        "mean": 83.79043749999998,
+        "min": 19.3,
+        "max": 90.0,
+        "mean": 69.34368333333332,
         "null_count": 0
       },
       "spd_mph_16:15": {
-        "min": 63.877,
-        "max": 100.989,
-        "mean": 83.85115178571428,
+        "min": 20.577,
+        "max": 90.0,
+        "mean": 69.99059166666666,
         "null_count": 0
       },
       "spd_mph_16:20": {
-        "min": 63.882,
-        "max": 101.18,
-        "mean": 83.91172321428571,
+        "min": 22.558,
+        "max": 90.0,
+        "mean": 70.94942499999999,
         "null_count": 0
       },
       "spd_mph_16:25": {
-        "min": 63.888,
-        "max": 101.371,
-        "mean": 83.97242857142858,
+        "min": 25.485,
+        "max": 90.0,
+        "mean": 72.25356666666667,
         "null_count": 0
       },
       "spd_mph_16:30": {
-        "min": 63.894,
-        "max": 101.562,
-        "mean": 84.03308035714285,
+        "min": 29.742,
+        "max": 90.0,
+        "mean": 73.87543333333333,
         "null_count": 0
       },
       "spd_mph_16:35": {
-        "min": 63.9,
-        "max": 101.753,
-        "mean": 84.09374107142857,
+        "min": 35.914,
+        "max": 90.0,
+        "mean": 75.6212,
         "null_count": 0
       },
       "spd_mph_16:40": {
-        "min": 63.906,
-        "max": 101.944,
-        "mean": 84.15443749999999,
+        "min": 44.771,
+        "max": 90.0,
+        "mean": 77.23195000000001,
         "null_count": 0
       },
       "spd_mph_16:45": {
-        "min": 63.912,
-        "max": 102.135,
-        "mean": 84.21505357142857,
+        "min": 56.846,
+        "max": 90.0,
+        "mean": 78.52444166666666,
         "null_count": 0
       },
       "spd_mph_16:50": {
-        "min": 63.918,
-        "max": 102.326,
-        "mean": 84.27572321428572,
+        "min": 63.141,
+        "max": 90.0,
+        "mean": 79.38774166666668,
         "null_count": 0
       },
       "spd_mph_16:55": {
-        "min": 63.924,
-        "max": 102.517,
-        "mean": 84.3364375,
+        "min": 63.203,
+        "max": 90.0,
+        "mean": 79.99723333333334,
         "null_count": 0
       },
       "spd_mph_17:00": {
-        "min": 63.929,
-        "max": 102.708,
-        "mean": 84.39706249999999,
+        "min": 63.264,
+        "max": 90.0,
+        "mean": 80.41399166666666,
         "null_count": 0
       },
       "spd_mph_17:05": {
-        "min": 63.935,
-        "max": 102.899,
-        "mean": 84.45773214285714,
+        "min": 63.325,
+        "max": 90.0,
+        "mean": 80.83368333333333,
         "null_count": 0
       },
       "spd_mph_17:10": {
-        "min": 63.941,
-        "max": 103.09,
-        "mean": 84.51835714285714,
+        "min": 63.387,
+        "max": 90.0,
+        "mean": 81.25334166666669,
         "null_count": 0
       },
       "spd_mph_17:15": {
-        "min": 63.947,
-        "max": 103.281,
-        "mean": 84.57904464285717,
+        "min": 63.448,
+        "max": 90.998,
+        "mean": 81.67304166666666,
         "null_count": 0
       },
       "spd_mph_17:20": {
-        "min": 63.953,
-        "max": 103.472,
-        "mean": 84.63967857142858,
+        "min": 63.509,
+        "max": 92.554,
+        "mean": 82.09266666666666,
         "null_count": 0
       },
       "spd_mph_17:25": {
-        "min": 63.959,
-        "max": 103.663,
-        "mean": 84.7003482142857,
+        "min": 63.571,
+        "max": 94.109,
+        "mean": 82.512325,
         "null_count": 0
       },
       "spd_mph_17:30": {
-        "min": 63.965,
-        "max": 103.854,
-        "mean": 84.76101785714286,
+        "min": 63.632,
+        "max": 95.665,
+        "mean": 82.93202500000001,
         "null_count": 0
       },
       "spd_mph_17:35": {
-        "min": 63.971,
-        "max": 104.045,
-        "mean": 84.8217142857143,
+        "min": 63.693,
+        "max": 97.221,
+        "mean": 83.3517,
         "null_count": 0
       },
       "spd_mph_17:40": {
-        "min": 63.976,
-        "max": 104.236,
-        "mean": 84.88237500000001,
+        "min": 63.755,
+        "max": 98.777,
+        "mean": 83.771325,
         "null_count": 0
       },
       "spd_mph_17:45": {
-        "min": 63.982,
-        "max": 104.427,
-        "mean": 84.94307142857143,
+        "min": 63.816,
+        "max": 100.333,
+        "mean": 84.19103333333332,
         "null_count": 0
       },
       "spd_mph_17:50": {
-        "min": 63.988,
-        "max": 104.618,
-        "mean": 85.00363392857142,
+        "min": 63.877,
+        "max": 101.888,
+        "mean": 84.61065833333333,
         "null_count": 0
       },
       "spd_mph_17:55": {
-        "min": 63.994,
-        "max": 104.809,
-        "mean": 85.06436607142857,
+        "min": 63.939,
+        "max": 103.444,
+        "mean": 85.03035,
         "null_count": 0
       },
       "unnamed: 94": {
         "min": NaN,
         "max": NaN,
         "mean": NaN,
-        "null_count": 112
+        "null_count": 120
       }
     },
     "demand": {
       "o_zone_id": {
         "min": 674.0,
         "max": 3412.0,
-        "mean": 1513.886075949367,
+        "mean": 1709.467741935484,
         "null_count": 0
       },
       "d_zone_id": {
         "min": 674.0,
         "max": 3413.0,
-        "mean": 1518.113924050633,
+        "mean": 1528.4193548387098,
         "null_count": 0
       },
       "volume": {
         "min": 0.0,
         "max": 7132.12,
-        "mean": 176.63227832911392,
+        "mean": 225.4185481935484,
         "null_count": 0
       }
     }
