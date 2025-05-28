@@ -1,10 +1,10 @@
 {
   "summary": {
-    "total": 46,
-    "errors": 8,
-    "warnings": 6,
-    "success": 11,
-    "info": 21
+    "total": 49,
+    "errors": 10,
+    "warnings": 7,
+    "success": 10,
+    "info": 22
   },
   "errors": [
     {
@@ -65,10 +65,24 @@
       "details": {}
     },
     {
-      "message": "Average network speed (104.1 mph) is unreasonably high",
+      "message": "Average network speed (96.9 mph) is unreasonably high",
       "field": "assignment",
       "details": {
-        "avg_speed": 104.07695846773485
+        "avg_speed": 96.87638969699806
+      }
+    },
+    {
+      "message": "High percentage error between assigned and reference volumes (MAPE = 318.5%)",
+      "field": "reference_volume",
+      "details": {
+        "mape": 318.464914485382
+      }
+    },
+    {
+      "message": "Large gap between total assigned and reference volumes (316.2%)",
+      "field": "reference_volume",
+      "details": {
+        "volume_gap": 316.24599458096867
       }
     }
   ],
@@ -132,6 +146,46 @@
       "message": "mode_type.csv not loaded. Cannot check demand-performance connectivity.",
       "field": "accessibility",
       "details": {}
+    },
+    {
+      "message": "Found 28 links (100.0%) with volume differences >100% from reference",
+      "field": "reference_volume",
+      "details": {
+        "large_diff_count": 28,
+        "large_diff_percent": 100.0,
+        "example_links": [
+          [
+            30.0,
+            74419.2933,
+            16584.51,
+            348.727718214165
+          ],
+          [
+            104.0,
+            74392.6266,
+            16584.51,
+            348.56692540207706
+          ],
+          [
+            118.0,
+            74392.6266,
+            16584.51,
+            348.56692540207706
+          ],
+          [
+            105.0,
+            74392.6266,
+            16584.51,
+            348.56692540207706
+          ],
+          [
+            66.0,
+            74285.96,
+            16584.51,
+            347.92375535967005
+          ]
+        ]
+      }
     }
   ],
   "success": [
@@ -156,17 +210,10 @@
       "details": {}
     },
     {
-      "message": "Good correlation between assigned and reference volumes (R\u00b2 = 0.907)",
+      "message": "Good correlation between assigned and reference volumes (R\u00b2 = 0.911)",
       "field": "reference_volume",
       "details": {
-        "r_squared": 0.9072621893967897
-      }
-    },
-    {
-      "message": "Low percentage error between assigned and reference volumes (MAPE = 5.7%)",
-      "field": "reference_volume",
-      "details": {
-        "mape": 5.712952984064165
+        "r_squared": 0.9113686072049729
       }
     },
     {
@@ -180,7 +227,7 @@
       "details": {}
     },
     {
-      "message": "R^2 value computed: -63.6210. Comparison successful.",
+      "message": "R^2 value computed: -169.2325. Comparison successful.",
       "field": "r2_score",
       "details": {}
     },
@@ -248,13 +295,13 @@
       "details": {}
     },
     {
-      "message": "OD Performance statistics: 30 OD pairs, 10 origins, 8 destinations, 13820.0 total volume",
+      "message": "OD Performance statistics: 30 OD pairs, 10 origins, 8 destinations, 40399.9 total volume",
       "field": "accessibility",
       "details": {
         "total_od_pairs": 30,
         "unique_origins": 10,
         "unique_destinations": 8,
-        "total_volume": 13819.95006
+        "total_volume": 40399.90006
       }
     },
     {
@@ -275,29 +322,29 @@
       }
     },
     {
-      "message": "Average congestion ratio (travel time / free flow time): 1.00",
+      "message": "Average congestion ratio (travel time / free flow time): 1.05",
       "field": "route_assignment",
       "details": {
-        "avg_congestion": 1.0000026174751533
+        "avg_congestion": 1.0471385494374064
       }
     },
     {
-      "message": "Assignment metrics: Total volume = 218508.6, VMT = 76323246.8 vehicle-miles, VHT = 733334.7 vehicle-hours, Avg speed = 104.1 mph",
+      "message": "Assignment metrics: Total volume = 2567353.6, VMT = 901459779.8 vehicle-miles, VHT = 9305257.8 vehicle-hours, Avg speed = 96.9 mph",
       "field": "assignment",
       "details": {
-        "total_volume": 218508.57660000003,
-        "total_vmt": 76323246.843463,
-        "total_vht": 733334.716609,
-        "avg_speed": 104.07695846773485
+        "total_volume": 2567353.5858,
+        "total_vmt": 901459779.75944,
+        "total_vht": 9305257.7886,
+        "avg_speed": 96.87638969699806
       }
     },
     {
-      "message": "Link speed statistics: Average = 85.4 mph, Range = 64.0 - 105.0 mph",
+      "message": "Link speed statistics: Average = 84.0 mph, Range = 64.0 - 104.0 mph",
       "field": "assignment",
       "details": {
-        "avg_link_speed_mph": 85.44991999999999,
+        "avg_link_speed_mph": 84.04095833333334,
         "min_link_speed_mph": 64.0,
-        "max_link_speed_mph": 104.9999
+        "max_link_speed_mph": 103.9906
       }
     },
     {
@@ -306,35 +353,42 @@
       "details": {}
     },
     {
-      "message": "Reference volume comparison: R\u00b2 = 0.907, RMSE = 448.2, MAPE = 5.7%, 64.3% of links with GEH < 5",
+      "message": "Reference volume comparison: R\u00b2 = 0.911, RMSE = 60698.1, MAPE = 318.5%, 0.0% of links with GEH < 5",
       "field": "reference_volume",
       "details": {
-        "r_squared": 0.9072621893967897,
-        "correlation": 0.9525031177884877,
-        "rmse": 448.22481513015435,
-        "mape": 5.712952984064165,
-        "geh_under_5_percent": 64.28571428571429,
-        "volume_gap": 5.14086259842011,
+        "r_squared": 0.9113686072049729,
+        "correlation": 0.9546562769944861,
+        "rmse": 60698.14497524782,
+        "mape": 318.464914485382,
+        "geh_under_5_percent": 0.0,
+        "volume_gap": 316.24599458096867,
         "n_points": 28,
-        "total_assigned": 187979.67649999994,
-        "total_reference": 178788.40999999995
+        "total_assigned": 2232598.7862,
+        "total_reference": 536365.23
       }
     },
     {
-      "message": "Doc statistics: Average = 0.05, Max = 0.26, 0.0% of links have severe congestion (doc > 2)",
-      "field": "assignment",
+      "message": "Exported 28 links with large volume differences to /Users/mustafagadah/Desktop/net_validator_code_I-17/I-17/problem_volume_links.csv",
+      "field": "reference_volume",
       "details": {
-        "avg_doc": 0.0513725,
-        "max_doc": 0.2642,
-        "severe_congestion_percent": 0.0
+        "output_file": "/Users/mustafagadah/Desktop/net_validator_code_I-17/I-17/problem_volume_links.csv"
       }
     },
     {
-      "message": "Congestion duration statistics: Average = 0.05 hours, Max = 0.26 hours, 81.7% of links have congestion (P > 0)",
+      "message": "Doc statistics: Average = 0.60, Max = 3.12, 23.3% of links have severe congestion (doc > 2)",
       "field": "assignment",
       "details": {
-        "avg_p": 0.05137253333333334,
-        "max_p": 0.264207,
+        "avg_doc": 0.5959158333333333,
+        "max_doc": 3.1241,
+        "severe_congestion_percent": 23.333333333333332
+      }
+    },
+    {
+      "message": "Congestion duration statistics: Average = 0.60 hours, Max = 3.12 hours, 81.7% of links have congestion (P > 0)",
+      "field": "assignment",
+      "details": {
+        "avg_p": 0.5959128166666667,
+        "max_p": 3.12411,
         "congested_links_percent": 81.66666666666667
       }
     },
@@ -348,10 +402,10 @@
       }
     },
     {
-      "message": "Average congestion ratio (travel time / free flow time): 1.00",
+      "message": "Average congestion ratio (travel time / free flow time): 1.05",
       "field": "route_assignment",
       "details": {
-        "avg_congestion": 1.0000026174751533
+        "avg_congestion": 1.0471385494374064
       }
     }
   ],
@@ -359,7 +413,7 @@
     "node_file": "/Users/mustafagadah/Desktop/net_validator_code_I-17/I-17/node.csv",
     "link_file": "/Users/mustafagadah/Desktop/net_validator_code_I-17/I-17/link_performance.csv",
     "demand_file": "/Users/mustafagadah/Desktop/net_validator_code_I-17/I-17/demand.csv",
-    "validation_time": "2025-05-27 00:45:12",
+    "validation_time": "2025-05-27 11:55:52",
     "node_count": 91,
     "link_count": 120,
     "demand_count": 62
@@ -440,27 +494,27 @@
       },
       "production_14:00-18:00": {
         "min": 0.0,
-        "max": 7132.12,
-        "mean": 1941.0961538615386,
+        "max": 21396.36,
+        "mean": 3888.8330769384606,
         "null_count": 78
       },
       "atraction_14:00-18:00": {
         "min": 0.0,
-        "max": 7132.12,
-        "mean": 1861.793076930769,
+        "max": 21396.36,
+        "mean": 3906.400769238462,
         "null_count": 78
       },
       "production_16:00-17:00": {
-        "min": 0.0,
-        "max": 2827.83,
-        "mean": 639.6964253484615,
-        "null_count": 78
+        "min": 93.55882353,
+        "max": 809.5411765,
+        "mean": 410.9137255033333,
+        "null_count": 82
       },
       "atraction_16:00-17:00": {
-        "min": 0.0,
-        "max": 2145.83,
-        "mean": 549.6647511392308,
-        "null_count": 78
+        "min": 98.82352941,
+        "max": 835.9647059,
+        "mean": 356.6457516455556,
+        "null_count": 82
       }
     },
     "link": {
@@ -490,14 +544,14 @@
       },
       "volume": {
         "min": 0.0,
-        "max": 51044.84,
-        "mean": 12746.333629166666,
+        "max": 21876.36,
+        "mean": 5462.714416666668,
         "null_count": 0
       },
       "ref_volume": {
         "min": 0.0,
-        "max": 7132.12,
-        "mean": 1489.9034166666668,
+        "max": 21396.36,
+        "mean": 4469.71025,
         "null_count": 0
       },
       "base_volume": {
@@ -520,14 +574,14 @@
       },
       "d": {
         "min": 0.0,
-        "max": 12502.21,
-        "mean": 1214.7067391666667,
+        "max": 5358.09,
+        "mean": 520.5886016666667,
         "null_count": 0
       },
       "doc": {
         "min": 0.0,
-        "max": 1.8495,
-        "mean": 0.3596091666666667,
+        "max": 0.7926,
+        "mean": 0.1541175,
         "null_count": 0
       },
       "fftt": {
@@ -537,9 +591,9 @@
         "null_count": 0
       },
       "travel_time": {
-        "min": 7.9539,
-        "max": 518.0847,
-        "mean": 183.8846525,
+        "min": 7.9377,
+        "max": 512.5697,
+        "mean": 183.40602333333334,
         "null_count": 0
       },
       "vdf_alpha": {
@@ -561,51 +615,51 @@
         "null_count": 0
       },
       "speed_mph": {
-        "min": 63.9999,
-        "max": 104.8776,
-        "mean": 85.26154666666666,
+        "min": 64.0,
+        "max": 104.9959,
+        "mean": 85.44355333333333,
         "null_count": 0
       },
       "speed_kmph": {
-        "min": 102.9758,
-        "max": 168.7481,
-        "mean": 137.1858275,
+        "min": 102.976,
+        "max": 168.9383,
+        "mean": 137.47867749999997,
         "null_count": 0
       },
       "vmt": {
         "min": 0.0,
-        "max": 43211844.6788,
-        "mean": 4452189.399201841,
+        "max": 18519362.0052,
+        "mean": 1908081.1710865248,
         "null_count": 0
       },
       "vht": {
         "min": 0.0,
-        "max": 420167.946365,
-        "mean": 43170.319360650006,
+        "max": 176499.601422,
+        "mean": 18338.9744993,
         "null_count": 0
       },
       "pmt": {
         "min": 0.0,
-        "max": 43211844.6788,
-        "mean": 4452189.399201841,
+        "max": 18519362.0052,
+        "mean": 1908081.1710865248,
         "null_count": 0
       },
       "pht": {
         "min": 0.0,
-        "max": 420167.946365,
-        "mean": 43170.319360650006,
+        "max": 176499.601422,
+        "mean": 18338.9744993,
         "null_count": 0
       },
       "vht_qvdf": {
         "min": 0.0,
-        "max": 684489.524285,
-        "mean": 61187.64934929167,
+        "max": 201831.521868,
+        "mean": 20275.635958366667,
         "null_count": 0
       },
       "pht_qvdf": {
         "min": 0.0,
-        "max": 684489.524285,
-        "mean": 61187.64934929167,
+        "max": 201831.521868,
+        "mean": 20275.635958366667,
         "null_count": 0
       },
       "geometry": {
@@ -614,20 +668,20 @@
       },
       "mod_vol_auto": {
         "min": 0.0,
-        "max": 51044.840028,
-        "mean": 12746.3336294,
+        "max": 21876.360012,
+        "mean": 5462.7144126,
         "null_count": 0
       },
       "p": {
         "min": 0.0,
-        "max": 1.849451,
-        "mean": 0.35960766666666666,
+        "max": 0.792622,
+        "mean": 0.154117575,
         "null_count": 0
       },
       "t0": {
-        "min": 15.075275,
+        "min": 15.603689,
         "max": 16.0,
-        "mean": 15.820196225000002,
+        "mean": 15.922941175,
         "null_count": 0
       },
       "t2": {
@@ -638,32 +692,30 @@
       },
       "t3": {
         "min": 16.0,
-        "max": 16.924725,
-        "mean": 16.179803775,
+        "max": 16.396311,
+        "mean": 16.077058825,
         "null_count": 0
       },
       "vt2_mph": {
-        "min": 18.354449,
-        "max": 67.5,
-        "mean": 53.915084224999994,
+        "min": 47.99997,
+        "max": 77.289565,
+        "mean": 63.223696358333335,
         "null_count": 0
       },
       "vt2_kmph": {
-        "min": 29.532309,
-        "max": 108.6075,
-        "mean": 86.74937045833333,
+        "min": 77.231952,
+        "max": 124.35891,
+        "mean": 101.72692743333332,
         "null_count": 0
       },
       "mu": {
         "min": 0.0,
         "max": 99999.0,
-        "mean": 6073.809219716667,
+        "mean": 5067.744422916667,
         "null_count": 0
       },
       "q_gamma": {
-        "min": 7302.171429,
-        "max": 5.2676601467824595e+19,
-        "mean": 1.4884507947156874e+18,
+        "unique_values": 98,
         "null_count": 22
       },
       "free_speed_mph": {
@@ -691,51 +743,51 @@
         "null_count": 0
       },
       "congestion_ref_speed_mph": {
-        "min": 62.561111,
-        "max": 90.0,
-        "mean": 79.01635595833334,
+        "min": 63.383333,
+        "max": 91.63569,
+        "mean": 81.45702439999998,
         "null_count": 0
       },
       "avg_queue_speed_mph": {
-        "min": 28.585013,
-        "max": 90.0,
-        "mean": 71.49748050833333,
+        "min": 63.383312,
+        "max": 90.721429,
+        "mean": 80.932182275,
         "null_count": 0
       },
       "avg_qvdf_period_speed_mph": {
-        "min": 62.612072,
-        "max": 90.0,
-        "mean": 78.21144396666665,
+        "min": 63.688696,
+        "max": 97.35098,
+        "mean": 83.05355120833333,
         "null_count": 0
       },
       "congestion_ref_speed_kmph": {
-        "min": 100.660828,
-        "max": 144.81,
-        "mean": 127.13731673333335,
+        "min": 101.983783,
+        "max": 147.441825,
+        "mean": 131.06435220833333,
         "null_count": 0
       },
       "avg_queue_speed_kmph": {
-        "min": 45.993285,
-        "max": 144.81,
-        "mean": 115.03944603333333,
+        "min": 101.98375,
+        "max": 145.970779,
+        "mean": 130.21988129166667,
         "null_count": 0
       },
       "avg_qvdf_period_speed_kmph": {
-        "min": 100.742823,
-        "max": 144.81,
-        "mean": 125.84221335,
+        "min": 102.475111,
+        "max": 156.637726,
+        "mean": 133.63316391666666,
         "null_count": 0
       },
       "avg_qvdf_period_travel_time": {
-        "min": 10.412932,
-        "max": 811.249408,
-        "mean": 206.83633948333335,
+        "min": 8.69284,
+        "max": 570.639188,
+        "mean": 189.21097225833333,
         "null_count": 0
       },
       "severe_congestion_p": {
         "min": 0.0,
-        "max": 1.416667,
-        "mean": 0.19722220833333334,
+        "max": 0.0,
+        "mean": 0.0,
         "null_count": 0
       },
       "spd_mph_14:00": {
@@ -745,285 +797,285 @@
         "null_count": 0
       },
       "spd_mph_14:05": {
-        "min": 63.939,
-        "max": 103.444,
-        "mean": 85.03035,
+        "min": 63.974,
+        "max": 104.362,
+        "mean": 85.25268333333334,
         "null_count": 0
       },
       "spd_mph_14:10": {
-        "min": 63.877,
-        "max": 101.888,
-        "mean": 84.61065833333333,
+        "min": 63.948,
+        "max": 103.724,
+        "mean": 85.0552,
         "null_count": 0
       },
       "spd_mph_14:15": {
-        "min": 63.816,
-        "max": 100.333,
-        "mean": 84.19103333333332,
+        "min": 63.922,
+        "max": 103.086,
+        "mean": 84.857825,
         "null_count": 0
       },
       "spd_mph_14:20": {
-        "min": 63.755,
-        "max": 98.777,
-        "mean": 83.771325,
+        "min": 63.896,
+        "max": 102.448,
+        "mean": 84.66040833333334,
         "null_count": 0
       },
       "spd_mph_14:25": {
-        "min": 63.693,
-        "max": 97.221,
-        "mean": 83.3517,
+        "min": 63.87,
+        "max": 101.81,
+        "mean": 84.46305833333332,
         "null_count": 0
       },
       "spd_mph_14:30": {
-        "min": 63.632,
-        "max": 95.665,
-        "mean": 82.93202500000001,
+        "min": 63.844,
+        "max": 101.172,
+        "mean": 84.265625,
         "null_count": 0
       },
       "spd_mph_14:35": {
-        "min": 63.571,
-        "max": 94.109,
-        "mean": 82.512325,
+        "min": 63.818,
+        "max": 100.534,
+        "mean": 84.06823333333334,
         "null_count": 0
       },
       "spd_mph_14:40": {
-        "min": 63.509,
-        "max": 92.554,
-        "mean": 82.09266666666666,
+        "min": 63.792,
+        "max": 99.896,
+        "mean": 83.870825,
         "null_count": 0
       },
       "spd_mph_14:45": {
-        "min": 63.448,
-        "max": 90.998,
-        "mean": 81.67304166666666,
+        "min": 63.767,
+        "max": 99.257,
+        "mean": 83.67338333333333,
         "null_count": 0
       },
       "spd_mph_14:50": {
-        "min": 63.387,
-        "max": 90.0,
-        "mean": 81.25334166666669,
+        "min": 63.741,
+        "max": 98.619,
+        "mean": 83.47598333333332,
         "null_count": 0
       },
       "spd_mph_14:55": {
-        "min": 63.325,
-        "max": 90.0,
-        "mean": 80.83368333333333,
+        "min": 63.715,
+        "max": 97.981,
+        "mean": 83.278675,
         "null_count": 0
       },
       "spd_mph_15:00": {
-        "min": 63.264,
-        "max": 90.0,
-        "mean": 80.41399166666666,
+        "min": 63.689,
+        "max": 97.343,
+        "mean": 83.08121666666666,
         "null_count": 0
       },
       "spd_mph_15:05": {
-        "min": 63.203,
-        "max": 90.0,
-        "mean": 79.99723333333334,
+        "min": 63.663,
+        "max": 96.705,
+        "mean": 82.88381666666668,
         "null_count": 0
       },
       "spd_mph_15:10": {
-        "min": 63.141,
-        "max": 90.0,
-        "mean": 79.38774166666668,
+        "min": 63.637,
+        "max": 96.067,
+        "mean": 82.68640833333332,
         "null_count": 0
       },
       "spd_mph_15:15": {
-        "min": 56.846,
-        "max": 90.0,
-        "mean": 78.52444166666666,
+        "min": 63.611,
+        "max": 95.429,
+        "mean": 82.48900833333333,
         "null_count": 0
       },
       "spd_mph_15:20": {
-        "min": 44.771,
-        "max": 90.0,
-        "mean": 77.23195000000001,
+        "min": 63.585,
+        "max": 94.791,
+        "mean": 82.29163333333332,
         "null_count": 0
       },
       "spd_mph_15:25": {
-        "min": 35.914,
-        "max": 90.0,
-        "mean": 75.6212,
+        "min": 63.559,
+        "max": 94.153,
+        "mean": 82.09426666666668,
         "null_count": 0
       },
       "spd_mph_15:30": {
-        "min": 29.742,
-        "max": 90.0,
-        "mean": 73.87543333333333,
+        "min": 63.533,
+        "max": 93.515,
+        "mean": 81.89691666666667,
         "null_count": 0
       },
       "spd_mph_15:35": {
-        "min": 25.485,
-        "max": 90.0,
-        "mean": 72.25356666666667,
+        "min": 63.507,
+        "max": 92.877,
+        "mean": 81.69943333333335,
         "null_count": 0
       },
       "spd_mph_15:40": {
-        "min": 22.558,
-        "max": 90.0,
-        "mean": 70.94942499999999,
+        "min": 63.481,
+        "max": 92.239,
+        "mean": 81.48924166666666,
         "null_count": 0
       },
       "spd_mph_15:45": {
-        "min": 20.577,
-        "max": 90.0,
-        "mean": 69.99059166666666,
+        "min": 63.455,
+        "max": 91.614,
+        "mean": 80.97144166666666,
         "null_count": 0
       },
       "spd_mph_15:50": {
-        "min": 19.3,
+        "min": 63.429,
         "max": 90.0,
-        "mean": 69.34368333333332,
+        "mean": 79.7906,
         "null_count": 0
       },
       "spd_mph_15:55": {
-        "min": 18.585,
+        "min": 63.403,
         "max": 90.0,
-        "mean": 68.9657,
+        "mean": 78.72440833333333,
         "null_count": 0
       },
       "spd_mph_16:00": {
-        "min": 18.354,
-        "max": 67.5,
-        "mean": 50.86537755102041,
+        "min": 48.0,
+        "max": 77.29,
+        "mean": 62.26374489795918,
         "null_count": 22
       },
       "spd_mph_16:05": {
-        "min": 18.585,
+        "min": 63.403,
         "max": 90.0,
-        "mean": 68.9657,
+        "mean": 78.72440833333333,
         "null_count": 0
       },
       "spd_mph_16:10": {
-        "min": 19.3,
+        "min": 63.429,
         "max": 90.0,
-        "mean": 69.34368333333332,
+        "mean": 79.7906,
         "null_count": 0
       },
       "spd_mph_16:15": {
-        "min": 20.577,
-        "max": 90.0,
-        "mean": 69.99059166666666,
+        "min": 63.455,
+        "max": 91.614,
+        "mean": 80.97144166666666,
         "null_count": 0
       },
       "spd_mph_16:20": {
-        "min": 22.558,
-        "max": 90.0,
-        "mean": 70.94942499999999,
+        "min": 63.481,
+        "max": 92.239,
+        "mean": 81.48924166666666,
         "null_count": 0
       },
       "spd_mph_16:25": {
-        "min": 25.485,
-        "max": 90.0,
-        "mean": 72.25356666666667,
+        "min": 63.507,
+        "max": 92.877,
+        "mean": 81.69943333333335,
         "null_count": 0
       },
       "spd_mph_16:30": {
-        "min": 29.742,
-        "max": 90.0,
-        "mean": 73.87543333333333,
+        "min": 63.533,
+        "max": 93.515,
+        "mean": 81.89691666666667,
         "null_count": 0
       },
       "spd_mph_16:35": {
-        "min": 35.914,
-        "max": 90.0,
-        "mean": 75.6212,
+        "min": 63.559,
+        "max": 94.153,
+        "mean": 82.09426666666668,
         "null_count": 0
       },
       "spd_mph_16:40": {
-        "min": 44.771,
-        "max": 90.0,
-        "mean": 77.23195000000001,
+        "min": 63.585,
+        "max": 94.791,
+        "mean": 82.29163333333332,
         "null_count": 0
       },
       "spd_mph_16:45": {
-        "min": 56.846,
-        "max": 90.0,
-        "mean": 78.52444166666666,
+        "min": 63.611,
+        "max": 95.429,
+        "mean": 82.48900833333333,
         "null_count": 0
       },
       "spd_mph_16:50": {
-        "min": 63.141,
-        "max": 90.0,
-        "mean": 79.38774166666668,
+        "min": 63.637,
+        "max": 96.067,
+        "mean": 82.68640833333332,
         "null_count": 0
       },
       "spd_mph_16:55": {
-        "min": 63.203,
-        "max": 90.0,
-        "mean": 79.99723333333334,
+        "min": 63.663,
+        "max": 96.705,
+        "mean": 82.88381666666668,
         "null_count": 0
       },
       "spd_mph_17:00": {
-        "min": 63.264,
-        "max": 90.0,
-        "mean": 80.41399166666666,
+        "min": 63.689,
+        "max": 97.343,
+        "mean": 83.08121666666666,
         "null_count": 0
       },
       "spd_mph_17:05": {
-        "min": 63.325,
-        "max": 90.0,
-        "mean": 80.83368333333333,
+        "min": 63.715,
+        "max": 97.981,
+        "mean": 83.278675,
         "null_count": 0
       },
       "spd_mph_17:10": {
-        "min": 63.387,
-        "max": 90.0,
-        "mean": 81.25334166666669,
+        "min": 63.741,
+        "max": 98.619,
+        "mean": 83.47598333333332,
         "null_count": 0
       },
       "spd_mph_17:15": {
-        "min": 63.448,
-        "max": 90.998,
-        "mean": 81.67304166666666,
+        "min": 63.767,
+        "max": 99.257,
+        "mean": 83.67338333333333,
         "null_count": 0
       },
       "spd_mph_17:20": {
-        "min": 63.509,
-        "max": 92.554,
-        "mean": 82.09266666666666,
+        "min": 63.792,
+        "max": 99.896,
+        "mean": 83.870825,
         "null_count": 0
       },
       "spd_mph_17:25": {
-        "min": 63.571,
-        "max": 94.109,
-        "mean": 82.512325,
+        "min": 63.818,
+        "max": 100.534,
+        "mean": 84.06823333333334,
         "null_count": 0
       },
       "spd_mph_17:30": {
-        "min": 63.632,
-        "max": 95.665,
-        "mean": 82.93202500000001,
+        "min": 63.844,
+        "max": 101.172,
+        "mean": 84.265625,
         "null_count": 0
       },
       "spd_mph_17:35": {
-        "min": 63.693,
-        "max": 97.221,
-        "mean": 83.3517,
+        "min": 63.87,
+        "max": 101.81,
+        "mean": 84.46305833333332,
         "null_count": 0
       },
       "spd_mph_17:40": {
-        "min": 63.755,
-        "max": 98.777,
-        "mean": 83.771325,
+        "min": 63.896,
+        "max": 102.448,
+        "mean": 84.66040833333334,
         "null_count": 0
       },
       "spd_mph_17:45": {
-        "min": 63.816,
-        "max": 100.333,
-        "mean": 84.19103333333332,
+        "min": 63.922,
+        "max": 103.086,
+        "mean": 84.857825,
         "null_count": 0
       },
       "spd_mph_17:50": {
-        "min": 63.877,
-        "max": 101.888,
-        "mean": 84.61065833333333,
+        "min": 63.948,
+        "max": 103.724,
+        "mean": 85.0552,
         "null_count": 0
       },
       "spd_mph_17:55": {
-        "min": 63.939,
-        "max": 103.444,
-        "mean": 85.03035,
+        "min": 63.974,
+        "max": 104.362,
+        "mean": 85.25268333333334,
         "null_count": 0
       },
       "unnamed: 94": {
@@ -1048,8 +1100,8 @@
       },
       "volume": {
         "min": 0.0,
-        "max": 7132.12,
-        "mean": 225.4185481935484,
+        "max": 21396.36,
+        "mean": 654.1266127096775,
         "null_count": 0
       }
     }
